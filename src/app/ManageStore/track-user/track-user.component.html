@@ -1,0 +1,35 @@
+<div class="container">
+    <h2 style="text-align: center; color: green;"><b>User Details</b></h2><hr>
+<table class="table table-striped table-hover" >
+    <thead>
+      <tr>
+        <th style="color: burlywood; font-size: large;">User Id</th>
+        <th style="color: burlywood; font-size: large;">User Name</th>
+        <th style="color: burlywood; font-size: large;">Email Id</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let todo of usersList">
+        <td>{{todo.id}}</td>
+        <td>{{todo.userName}}</td>
+        <td>{{todo.email}} </td>
+        <td><button class="btn btn-primary" routerLink="/userDetails/{{todo.id}}" type="button" style="background-color: black;"><span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;View</button></td>
+         
+      </tr>
+    </tbody>
+  <!--  <tbody>
+        <tr *ngFor="let todo of searchedItemsList">
+          <td><img src="./assets/buiscuits.webp" style="height:150px;width: 150px;"></td>
+          <td>{{todo.name}} | {{todo.category}} | <p> <b>{{todo.price}} /-</b></p></td>
+          
+           
+          <td>{{todo.available}}</td>
+          <td><button (click)="btnClick()" type="button" class="btn btn-success" >  
+            Purchase </button></td>
+           
+        </tr>
+      </tbody>-->
+  </table>
+</div>
+
+<router-outlet></router-outlet>

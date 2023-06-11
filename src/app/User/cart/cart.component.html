@@ -1,0 +1,30 @@
+<div class="container">
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+            <th> </th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Seller's Name</th>
+                <th>Category</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let todo of showItems">
+                  <td><img src={{todo.photo}} style="height:120px;width: 120px;"></td>
+                  <td>{{todo.name}}</td>
+                  <td>{{todo.description}}</td>
+                  <td>{{todo.sellerName}}</td>
+                  <td>{{todo.category}} </td>
+                  <td><p> <b>{{todo.price}} /-</b></p></td>
+                  <td><p><b>Qty</b></p><input type="number" min="1" [defaultValue]="0" style="width: 50px;" id="qty"></td>
+                  <td><button (click)="removeFromCart(todo)" type="button" class="btn btn-success" >  
+                   Remove </button></td>
+                  <td><button (click)="btnClick(todo.id)" type="button" class="btn btn-success" >  
+                    Purchase Now </button></td>
+                   
+                </tr>
+              </tbody>
+    </table>
+</div>

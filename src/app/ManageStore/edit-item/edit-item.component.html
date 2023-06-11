@@ -1,0 +1,29 @@
+<div class="container">
+
+    <table class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th> </th>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th> Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of itemsList">
+          <td><img src="{{item.photo}}" style="height: 120px; width: 120px;"></td>
+          <td>{{item.id}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.category}}</td>
+          <td>
+            <button type="button" class="btn btn-success" routerLink="/editMedicine/{{item.id}}">Edit</button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-danger" (click)="deleteItem(item.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  
+<router-outlet></router-outlet>

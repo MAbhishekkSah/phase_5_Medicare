@@ -1,0 +1,12 @@
+
+<div class="container" *ngIf="isLoggedIn=='Y'">
+    <h2><b>You are Succsessfully Logout. Want to Login Again!</b></h2>
+    <button class="btn btn-success" type="button" routerLink="../login">
+        <span class="glyphicon glyphicon-hand-right"></span>&nbsp;&nbsp;Click Here</button>
+
+</div>
+<div class="container" *ngIf="isLoggedIn=='N'">
+    <h2><b>You are not Logged In.Please Login First!</b></h2>
+    <button class="btn btn-success" type="button" routerLink="../login">
+        <span class="glyphicon glyphicon-hand-right"></span>&nbsp;&nbsp;Click Here</button>
+</div>
